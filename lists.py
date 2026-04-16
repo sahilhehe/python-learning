@@ -45,3 +45,14 @@ print(l)
 l= [3,4,'delhi',5]
 l.clear()
 print(l)
+
+#OPERATIONS ON LIST
+
+# + operator - merges two list
+l1= [1,2,3]
+l2=[2,3,5]
+print(l1+l2) 
+
+# * repeats the list n times
+
+print (l1*3)
