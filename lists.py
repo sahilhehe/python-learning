@@ -56,3 +56,61 @@ print(l1+l2)
 # * repeats the list n times
 
 print (l1*3)
+
+#membership operator
+l=[1,21,3]
+print(21 in l)
+
+#LOOP
+
+L1= [1,2,44,75,7]
+
+for i in L1:
+    print(i)
+
+# SOME FUNCTIONS
+L1= [1,2,44,75,7,1,2]
+print(min(L1))
+print(max(L1))
+print(len(L1))
+print(sorted(L1))
+print(L1.count(2))
+
+#SORT VS SORTED
+L=[1,34,42,2,53,5,8]
+
+
+#SORTED IS A TEMPORARY OPERATION ORIGINAL LIST DOES NT CHANGE
+
+print(sorted(L))
+print (L)
+
+L.sort()
+print(L)
+
+
+#COPY
+
+L=[1,2,3,31.3]
+L2= L.copy()
+print (L)
+print(id(L))
+print (L2)
+print (id(L2))
+
+#BOTH ARE DIFFERENT LIST SINCE THE ADDRESS OF BOTH ARE DIFFERENT BUT THE VALUES OF BOTHM OF THE LISTS ARE SAME
+
+#LIST COMPREHENSION
+
+L=[i for i in range (1,11)]
+print(L)
+
+l= [1,2,3,4]
+
+l2=[i**2 for i in l ]
+print(l2)
+
+l=[]
+
+l=[i for i in range(1,51) if i%5==0]
+print (l)
