@@ -74,6 +74,7 @@ print(min(L1))
 print(max(L1))
 print(len(L1))
 print(sorted(L1))
+print(sum(L1))
 print(L1.count(2))
 
 #SORT VS SORTED
