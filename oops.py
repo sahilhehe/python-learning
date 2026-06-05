@@ -124,3 +124,7 @@ a=  Fraction(1,3)
 b=  Fraction(2,3)
 c= Fraction(8,3)
 print(a*c)
+
+
+#all the magic functions needs (self,other) both of this to trigger
+#the magic method gets triggered when we put + sign betweeen both objects (for __add__ magic method)

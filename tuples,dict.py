@@ -179,7 +179,7 @@ s = {
 print(s)
 # using sequence and dict function
 d4 = dict([('name','nitish'),('age',32),(3,3)])
-print(d4)
+print(d4['name'])
 # duplicate keys
 d5 = {'name':'sahil','name':'rahul'}
 print(d5)
