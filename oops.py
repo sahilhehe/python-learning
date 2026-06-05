@@ -128,3 +128,37 @@ print(a*c)
 
 #all the magic functions needs (self,other) both of this to trigger
 #the magic method gets triggered when we put + sign betweeen both objects (for __add__ magic method)
+
+
+class Point:
+  def __init__(self,x,y):
+    self.x = x
+    self.y = y
+
+  def __str__(self):
+    return '<{},{}>'.format(self.x,self.y)
+  def distance(self,other):
+    return ((self.x-other.x)**2+(self.y-other.y)**2)**0.5
+  def dfromo(self):
+    return self.distance(Point(0,0))
+p1 = Point(0,0)
+p2 = Point(1,1)
+
+print(p2.dfromo())
+
+class Line():
+  def __init__(self,a,b,c):
+    self.a = a
+    self.b = b
+    self.c = c
+
+  def __str__(self):
+    return '{}a + {}b + {}'.format(self.a,self.b,self.c)
+  def ponl (self,other):
+    if self.a*other.x + self.b*other.y+self.c==0:
+      return 'lies on line'
+    else:
+      return 'doesnt lie on  line'
+a = Point(1,1)
+b = Line (1,1,-2)
+print(b.ponl(a))
