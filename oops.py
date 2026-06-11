@@ -342,8 +342,43 @@ class Atm:
   #STATIC VARIABLE - VALUE SAME FOR EVERY OBJECT
   #INSTANCE VARIABLE - DIFFERENT VALUE FOR EVERY OBJECT
 
+     
 
   # @staticmethod
   # def get_counter():
   #   return Atm.__counter
 # UTILITY METHOD FOR THIS YOU DONT NEED TO CREATE OBJECTS
+
+
+from abc import ABC,abstractmethod
+class BankApp(ABC):
+
+  def database(self):
+    print('connected to database')
+
+  @abstractmethod
+  def security(self):
+    pass
+
+  @abstractmethod
+  def display(self):
+    pass
+
+
+class MobileApp(BankApp):
+
+  def mobile_login(self):
+    print('login into mobile')
+
+  def security(self):
+    print('mobile security')
+
+  def display(self):
+    print('display')
+
+a= MobileApp()
+a.mobile_login()
+
+#abstract class has at least 1 abstract method and it inherits ABC CLASS
+#cant make object of abstract class
+#jo subclass hai usme abstract class wale methods hone chaiye to functions
