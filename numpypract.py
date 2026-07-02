@@ -61,5 +61,15 @@ for i in np.nditer(b):
 print(b.T)
 
 #RAVEL- CONVERT ND IN 1D
-
 print(b.ravel())
+
+
+arr = np.random.randint(1,100,24).reshape(6,4)
+print(arr)
+print(arr[arr>50])
+
+
+# Broadcasting
+# The term broadcasting describes how NumPy treats arrays with different shapes during arithmetic operations.
+
+# The smaller array is “broadcast” across the larger array so that they have compatible shapes.ts so goated actually
