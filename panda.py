@@ -79,3 +79,77 @@ print(rn.describe())  #importan, gives u everything
 #     print(values)
 
 print(rn[rn==0].size)
+
+
+#DATAFRAME
+
+# using lists
+student_data = [
+    [100,80,10],
+    [90,70,7],
+    [120,100,14],
+    [80,50,2]
+]
+
+print(pd.DataFrame(student_data,columns=['iq','marks','package']))
+
+# using dicts
+
+student_dict = {
+    'name':['nitish','ankit','rupesh','rishabh','amit','ankita'],
+    'iq':[100,90,120,80,0,0],
+    'marks':[80,70,100,50,0,0],
+    'package':[10,7,14,2,0,0]
+}
+
+students = pd.DataFrame(student_dict)
+students.set_index('name',inplace=True)
+print(students)
+
+movis = pd.read_csv('./data/movies.csv')
+ipl = pd.read_csv('./data/ipl-matches.csv')
+print(movis)
+print(movis.shape)#total rows and colmns
+print(movis.columns)
+print(movis.values)
+print(movis.head())
+print(movis.tail())
+print(movis.sample())
+print(movis.info())
+print(movis.describe())
+print(movis.isnull().sum())
+print(movis.duplicated().sum())
+
+#MATHEMATICAL FNS
+
+print(students.sum(axis=1))  #row wise
+
+print(students.sum()) #sums colmn wise
+
+print(students.mean())
+print(students.median())
+print(students.std())
+print(students.var())
+
+#fetching
+
+print(movis[['poster_path','runtime','genres']])
+
+
+### Selecting rows from a DataFrame
+
+# - **iloc** - searches using index positions
+# - **loc** - searches using index labels 
+
+print(movis.iloc[0])
+print(movis.iloc[0:5])
+print(movis.iloc[[0,4,5]])
+print(movis.iloc[0:3,0:3])
+
+
+print(students.loc['nitish'])
+
+# print(ipl)
+
+# print(ipl.loc['WinningTeam'])
+print(ipl.loc[0:,'WinningTeam'])
